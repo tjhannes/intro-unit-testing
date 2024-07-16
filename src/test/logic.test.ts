@@ -9,28 +9,31 @@ test("summing two positive numbers", () => {
 
 test("summing two negative numbers", () => {
   // TODO
+  const res = add(-1, -2);
+  expect(res).toBe(-3);
 });
 
 test("summing a positive and a negative number", () => {
-  // TODO
+  expect(add(-7, 40)).toBe(33);
 });
 
 test("summing 0s", () => {
-  // TODO
+  expect(add(0, 0)).toBe(0);
 });
 
 test("inputting undefined", () => {
   // TODO
+  expect(() => add(1, undefined)).toThrow();
 });
 
 test("inputting null", () => {
-  // TODO
+  expect(() => add(null, null)).toThrow();
 });
 
 test("inputting NaN", () => {
-  // TODO
+  expect(() => add(NaN, NaN)).toThrow();
 });
 
 test("inputting Infinity", () => {
-  // TODO
+  expect(() => add(Infinity, Infinity)).toThrow();
 });
